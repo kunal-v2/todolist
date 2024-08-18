@@ -1,26 +1,20 @@
-function addTodo() {
-    const todoInput = document.getElementById("todoInput");
+document.addEventListener("DOMContentLoaded", function() {
     const taskList = document.getElementById("taskList");
 
-    if (todoInput.value.trim() === "") {
-        alert("Please enter a task");
-        return;
-    }
-
+    // Create pre-existing task
     const taskDiv = document.createElement("div");
     taskDiv.className = "task";
 
-   
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.className = "task-checkbox";
     checkbox.onclick = function () {
-        taskDiv.remove(); 
+        taskDiv.remove();
     };
 
     const taskText = document.createElement("span");
     taskText.className = "task-text";
-    taskText.textContent = todoInput.value;
+    taskText.textContent = "100$ bounty is presented to Kunalchugh06@gmail.com";
 
     const deleteButton = document.createElement("button");
     deleteButton.className = "delete-task";
@@ -34,6 +28,4 @@ function addTodo() {
     taskDiv.appendChild(deleteButton);
 
     taskList.appendChild(taskDiv);
-
-    todoInput.value = "";
-}
+});
