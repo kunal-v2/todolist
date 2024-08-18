@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const taskText = document.createElement("span");
     taskText.className = "task-text";
-    taskText.textContent = "100$ bounty is presented to Kunalchugh06@gmail.com";
+    taskText.textContent = "100$ bounty is presented to <ul>100xKunal</ul>";
 
     const deleteButton = document.createElement("button");
     deleteButton.className = "delete-task";
